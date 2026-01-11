@@ -89,7 +89,7 @@ export function useQuiz() {
     setPersistState(prev => ({ ...prev, isLoading: true, error: null }));
     
     try {
-      const response = await fetch(`${API_BASE}/api/quiz?amount=15`);
+      const response = await fetch(`${API_BASE}api/quiz?amount=15`);
       const data = await response.json();
       
       if (data.response_code !== 0) {
