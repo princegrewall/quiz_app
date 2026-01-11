@@ -8,6 +8,7 @@ export default defineConfig(({ mode }) => ({
   server: {
     host: "::",
     port: 8080,
+    allowedHosts: ["quiz-app-1-o40f.onrender.com"], // ✅ Add your Render host here
   },
   plugins: [react(), mode === "development" && componentTagger()].filter(Boolean),
   resolve: {

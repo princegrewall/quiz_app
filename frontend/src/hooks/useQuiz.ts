@@ -83,6 +83,7 @@ export function useQuiz() {
   const timerRef = useRef<NodeJS.Timeout | null>(null);
 
   const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:4000';
+  //console.log('API_BASE:', API_BASE);
 
   const fetchQuestions = useCallback(async () => {
     setPersistState(prev => ({ ...prev, isLoading: true, error: null }));
