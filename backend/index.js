@@ -5,7 +5,9 @@ const { connectDB } = require('./db');
 const Submission = require('./models/model');
 
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin: "https://quiz-app-1-o40f.onrender.com"
+}));
 app.use(express.json());
 
 // Connect to MongoDB
